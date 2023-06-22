@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Comparison {
 
     // Метод сравнения веса(приватный, буду его использовать в методе
-    // printComparisonResult). Возвращает объект имеющий больший вес либо
+    // resultComparison). Возвращает объект имеющий больший вес либо
     // выбрасывает
     // ошибку EqualValueException. Далее ошибку необходимо будет
     // обработать в try-catch по своему усмотрению (т.к она наследуется от
@@ -20,7 +20,7 @@ public class Comparison {
     }
 
     // Метод сравнения скорости(приватный, буду его использовать в методе
-    // printComparisonResult). Возвращает объект имеющий большую скорость либо
+    // resultComparison). Возвращает объект имеющий большую скорость либо
     // выбрасывает
     // ошибку EqualValueException. Далее ошибку необходимо будет
     // обработать в try-catch по своему усмотрению (т.к она наследуется от
@@ -43,12 +43,10 @@ public class Comparison {
     // коэффициенту полезности, стоимости, затрат на содержание, цвету, сроку
     // жизни/пользования и так далее (на что хватит фантазии). А так же два объекта
     // для сравнения.
-    public String printComparisonResult(String whatMeasurement, Comparable firstObject,
+    public String resultComparison(String whatMeasurement, Comparable firstObject,
             Comparable secondObject) {
         String lowerCaseMeasurement = whatMeasurement.toLowerCase();
         String result = null;
-        firstObject.printAboutObject();
-        secondObject.printAboutObject();
         try {
             switch (lowerCaseMeasurement) {
                 case "вес":
