@@ -55,6 +55,8 @@ public class Comparison {
                 case "скорость":
                     result = speedComparison(firstObject, secondObject).toString();
                     break;
+                default:
+                    throw new IOException("Введен некорректный параметр: " + lowerCaseMeasurement);
             }
             return "Побеждает " + result + ". Он имеет " + lowerCaseMeasurement + " больше";
         } catch (IOException e) {
